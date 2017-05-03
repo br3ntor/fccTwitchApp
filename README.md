@@ -7,3 +7,4 @@
 ### Needed improvements:
 - Better styling
 - Sign in/out button styling and placement
+- Add in site twitch video
