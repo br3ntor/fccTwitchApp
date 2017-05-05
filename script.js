@@ -68,7 +68,7 @@ function signedIn() {
             console.log(data);
             if (data.streams) {
                 console.log("True, data.streams exists!");
-                $("#replace").html("<h2 class='text-center'><span class='label label-success'>Success!</span></h2>");
+                $("#replace").html("<img src='kappa.png' class='spin center-block'>");
                 // $("#replace").html("<h2 class='text-center'><span class='label label-success'>Success!</span></h2>");
             } else {
                 console.log("False");
@@ -92,7 +92,6 @@ signedIn();
 //Part 2
 //Loop through given array to make individual API calls
 //Gets user object by name with data including user id even if offline
-// fccArray.forEach(function(channel) {
 fccArray.forEach(function(channel) {
     function handleData(theData) {
         console.log(theData);
@@ -114,8 +113,8 @@ fccArray.forEach(function(channel) {
 
                     //steam exists but is it live?
                     if (data.stream !== null) {
+                        
                         console.log(theData.users[0].display_name + " is online!");
-
                         $("#online, #all").prepend("<div class='row rowMargins'><div class='col-xs-5'><img class='pull-right' src='" +
                             data.stream.channel.logo + "'><h3><a href='" +
                             data.stream.channel.url + "'>" +
@@ -127,8 +126,8 @@ fccArray.forEach(function(channel) {
                             data.stream.channel.followers + "</h4></div></div>");
 
                     } else if (data.stream === null) {
-                        console.log(theData.users[0].display_name + " is offline :(");
 
+                        console.log(theData.users[0].display_name + " is offline :(");
                         $("#offline, #all").append("<div class='row rowMargins'><div class='col-xs-5'><img class='pull-right' src='" +
                             theData.users[0].logo + "'><h3><a href='https://www.twitch.tv/" +
                             channel + "'>" +
@@ -141,8 +140,8 @@ fccArray.forEach(function(channel) {
 
             //else if steam does not exist
         } else if (theData._total === 0) {
-            console.log(channel + " does not exist!");
 
+            console.log(channel + " does not exist!");
             $(".noExist").append("<div class='row rowMargins'><div class='col-xs-5'><img class='pull-right' src='https://static-cdn.jtvnw.net/jtv_user_pictures/twitch-profile_image-8a8c5be2e3b64a9a-300x300.png'><h3>" +
                 channel + "</h3></div><div class='col-xs-7'><img src='http://i.imgur.com/tPoH4zD.jpg'><h4>This channel does not exist</h4></div></div>");
         }

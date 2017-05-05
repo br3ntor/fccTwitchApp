@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Twitch App</title>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -25,7 +27,7 @@
         </div>
         <div class="row rowMargins">
             <div class="col-xs-12" id="replace">
-                <p class="text-center"><a class="btn btn-primary" role="button" href="https://api.twitch.tv/kraken/oauth2/authorize?response_type=token&client_id=bt3cudkorr3pi3p4pxurgwnrzcguzbx&redirect_uri=http://br3ntor.us/twitch&scope=user_read">Sign in With Twitch</a></p>
+                <p class="text-center btnEdit"><a class="btn btn-primary btn-lg" role="button" href="https://api.twitch.tv/kraken/oauth2/authorize?response_type=token&client_id=bt3cudkorr3pi3p4pxurgwnrzcguzbx&redirect_uri=http://localhost/twitch&scope=user_read">Sign in With Twitch</a></p>
             </div>
         </div>
         <!-- Should the following div be a col or a whole new row? Works fine as it is btw -->
@@ -41,22 +43,18 @@
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active" id="home">
-                        <div id="all">
-                        </div>
+                        <div id="all"></div>
                         <div class="noExist"></div>
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="profile">
-                        <div id="online">
-                        </div>
+                        <div id="online"></div>
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="messages">
-                        <div id="offline">
-                        </div>
+                        <div id="offline"></div>
                         <div class="noExist"></div>
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="settings">
-                        <div id="following">
-                        </div>
+                        <div id="following"></div>
                     </div>
                 </div>
             </div>
