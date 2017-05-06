@@ -121,7 +121,7 @@ fccArray.forEach(function(channel) {
 
             console.log(channel + " does not exist!");
             $(".noExist").append("<div class='row rowMargins'><div class='col-xs-5'><img class='pull-right' src='https://static-cdn.jtvnw.net/jtv_user_pictures/twitch-profile_image-8a8c5be2e3b64a9a-300x300.png'><h3>" +
-                channel + "</h3></div><div class='col-xs-7'><img src='http://i.imgur.com/tPoH4zD.jpg'><h4>This channel does not exist</h4></div></div>");
+                channel + "</h3></div><div class='col-xs-7'><img src='img/static.jpg'><h4>This channel does not exist</h4></div></div>");
         }
     }
     apiCall("https://api.twitch.tv/kraken/users?login=", channel).done(handleData);

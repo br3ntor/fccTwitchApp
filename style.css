@@ -135,7 +135,7 @@ h3 > a:hover {
 
 #watermark {
     position: fixed;
-    bottom: 25px;
+    bottom: 30px;
     left: 10px;
     width: 120px;
     opacity: 0.5;
