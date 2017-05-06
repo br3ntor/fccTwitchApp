@@ -1,5 +1,5 @@
 # [fccTwitchApp](https://br3ntor.github.io/fccTwitchApp)
-## App for Free Code Camp ... unfinished
+## App for Free Code Camp
 ---
 ### Known issues:
 - Broken bootstrap from css
