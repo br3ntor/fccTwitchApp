@@ -135,6 +135,7 @@ a {
     left: 10px;
     width: 120px;
     opacity: 0.5;
+    z-index: 1;
 }
 
 #octocat:hover {
@@ -148,6 +149,7 @@ a {
     font-size: 70px;
     opacity: 0.5;
     color: #9f86ff;
+    z-index: 1;
 }
 #upArrow:hover {
     opacity: 1.0;
