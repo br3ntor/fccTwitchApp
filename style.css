@@ -34,17 +34,11 @@
 }
 /* -End Spin CSS- */
 
-html {
-    /*This keeps scrollbar from resizing page*/
-    /*margin-left: calc(100vw - 100%);*/
-}
-
 body {
+    /*This keeps scrollbar from resizing page*/    
     margin-left: calc(100vw - 100%);
-    background-image: url("debut_dark.png");
+    background-image: url("img/debut_dark.png");
     background-attachment: fixed;
-    /*background-color: #474753;*/
-    /*background-repeat: repeat;*/
     color: white;
     font-size: 24px;
 }
@@ -75,12 +69,6 @@ h4 {
     color: white;
     /*font-size: 1em;*/
 }
-
-
-/*span {
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.7);
-}*/
 
 h3 > a {
     color: #34c3f1;
@@ -134,12 +122,8 @@ h3 > a:hover {
     max-height: 300px;
 }
 
-
 /*Pretty cool way to select every child after the first*/
-
-
 /*Slightly confused as this seems to cound img as 1st child?*/
-
 .col-xs-7 h4:nth-child(n+3) strong {
     color: #9f86ff;
 }
@@ -149,15 +133,23 @@ h3 > a:hover {
     background-color: transparent;
 }
 
+#watermark {
+    position: fixed;
+    bottom: 25px;
+    left: 10px;
+    width: 120px;
+    opacity: 0.5;
+}
+
+#watermark:hover {
+    opacity: 1.0;
+}
+
 #myTabs .active a {
     background-color: #547ab3;
-    color: floralwhite;
+    color: floralwhite;    
 }
 
 #myTabs a {
     color: floralwhite;
-}
-
-#replace {
-    /*height: 120px;*/
 }
