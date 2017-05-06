@@ -4,7 +4,7 @@ $("#myTabs a").click(function(e) {
     $(this).tab("show");
 });
 
-console.log("Script2 Testing");
+console.log("FCC Twitch App");
 console.log("***************");
 var fccArray = ["freecodecamp", "OgamingSC2", "cretetion", "ESL_SC2", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "tsm_theoddone", "dotamajor", "brunofin", "comster404", "definitelynull", "exbc", "cjayride"];
 
@@ -68,6 +68,7 @@ signedIn();
 // Part 2
 // Loop through given array and make individual API calls
 // Gets user object by name with data, including user id, even if offline
+// Uses that id to make api call to streams object
 fccArray.forEach(function(channel) {
     function handleData(theData) {
         console.log(theData);
@@ -119,7 +120,7 @@ fccArray.forEach(function(channel) {
             // else if stream does not exist
         } else if (theData._total === 0) {
             console.log(channel + " does not exist!");
-            
+
             $(".noExist").append("<div class='row rowMargins'><div class='col-xs-5'><img class='pull-right' src='https://static-cdn.jtvnw.net/jtv_user_pictures/twitch-profile_image-8a8c5be2e3b64a9a-300x300.png'><h3>" +
                 channel + "</h3></div><div class='col-xs-7'><img src='img/static.jpg'><h4>This channel does not exist</h4></div></div>");
         }
