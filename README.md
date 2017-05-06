@@ -7,3 +7,4 @@
 ### Needed improvements:
 - Better styling
 - Add embedded twitch video
+- Add scroll to top button
