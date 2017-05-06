@@ -6,7 +6,7 @@ $("#myTabs a").click(function(e) {
 
 console.log("Script2 Testing");
 console.log("***************");
-var fccArray = ["freecodecamp", "OgamingSC2", "cretetion", "ESL_SC2", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "tsm_theoddone", "dotamajor", "brunofin", "comster404", "definitelynull", "exbc"];
+var fccArray = ["freecodecamp", "OgamingSC2", "cretetion", "ESL_SC2", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "tsm_theoddone", "dotamajor", "brunofin", "comster404", "definitelynull", "exbc", "cjayride"];
 
 //Create URL and make API call with it
 function apiCall(rootURL, endpoint) {
