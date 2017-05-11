@@ -61,6 +61,7 @@ function signedIn() {
                     data.streams[i].viewers + "</h4><h4><strong>Followers:</strong> " +
                     data.streams[i].channel.followers + "</h4></div></div></div>");
             }
+            $('#myTabs a:last').tab('show');
         }
     });
 }
