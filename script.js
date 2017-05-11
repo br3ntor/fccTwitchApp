@@ -55,7 +55,7 @@ function signedIn() {
                     data.streams[i].channel.logo + "'><h3><a href='" +
                     data.streams[i].channel.url + "'>" +
                     data.streams[i].channel.display_name + "</a></h3></div><div class='col-md-7'><img class='center-block img-responsive' src='" +
-                    data.streams[i].preview.large + "'><div class='outputWrap'><h4 class='usrOn'><strong>Online</strong></h4><h4><strong>Status:</strong> " +
+                    data.streams[i].preview.large + "'><div class='outputWarp'><h4 class='usrOn'><strong>Online</strong></h4><h4><strong>Status:</strong> " +
                     data.streams[i].channel.status + "</h4><h4><strong>Game:</strong> " +
                     data.streams[i].channel.game + "</h4><h4><strong>Viewers:</strong> " +
                     data.streams[i].viewers + "</h4><h4><strong>Followers:</strong> " +

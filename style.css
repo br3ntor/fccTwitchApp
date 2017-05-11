@@ -3,7 +3,6 @@
 .spin {
     width: 120px;
     height: 120px;
-    /*animation-direction: alternate;*/
     -webkit-animation: spin 4s linear infinite;
     -moz-animation: spin 4s linear infinite;
     animation: spin 4s linear infinite;
@@ -40,7 +39,6 @@
 body {
     /*This keeps scrollbar from resizing page*/
     margin-left: calc(100vw - 100%);
-    /*background: grey;*/
     background-image: url("img/debut_dark.png");
     background-attachment: fixed;
     background-repeat: repeat;
@@ -88,6 +86,12 @@ a {
     font-family: Orbitron;
 }
 
+span {
+    font-size: 70px;
+    left: 7px;
+    margin-top: -4px;
+}
+
 .usrOn {
     color: lime;
 }
@@ -99,8 +103,6 @@ a {
 .rowMargins {
     margin-bottom: 10px;
     margin-top: 10px;
-    /*border-top: 4px #686098 solid;*/
-    /*border-bottom: 4px #686098 solid;*/
 }
 
 .tab-content .row {
@@ -118,7 +120,6 @@ a {
 
 .col-md-5 > img {
     border-radius: 10px;
-    /*border: 4px #686098 solid;*/
 }
 
 .col-md-7 > img {
@@ -126,7 +127,6 @@ a {
     z-index: -1;
     border-radius: 10px;
     max-height: 300px;
-    /*border: 4px #686098 solid;*/
 }
 
 .navbar {
@@ -152,12 +152,18 @@ a {
 }
 
 #octocat {
-    /*position: absolute;*/
-    /*bottom: 10px;*/
-    /*right: -15px;*/
-    height: 70px;
+    border-radius: 15px;
+    opacity: 0.7;
     z-index: 1;
-    opacity: 0.5;
+    background-color: white;
+    left: 15px;
+    bottom: 25px;
+    position: fixed;
+    width: 80px;
+}
+
+#octocat > img {
+    width: 100%;
 }
 
 #octocat:hover {
@@ -165,19 +171,21 @@ a {
 }
 
 #upArrow {
-    position: absolute;
-    right: 10px;
-    top: -5px;
-    font-size: 70px;
+    background-color: white;
     color: #9f86ff;
+    opacity: 0.7;
+    position: fixed;
+    right: 15px;
     z-index: 1;
-    /*bottom: -10px;*/
+    width: 80px;
+    height: 65px;
+    border-radius: 20px;
+    bottom: 25px;
 }
 
-#upArrow > span:hover {
+#upArrow:hover {
     opacity: 1.0;
     color: #8a3bfc;
-    /*opacity: 0.5;*/
 }
 
 #myTabs .active a {
@@ -238,10 +246,6 @@ a {
         left: 50%;
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
-    }
-    .rowMargins {
-        /*margin-bottom: 50px;*/
-        /*margin-top: 50px;*/
     }
     .col-md-5 > img {
         width: 200px;
