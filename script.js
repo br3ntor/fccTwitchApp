@@ -51,10 +51,10 @@ function signedIn() {
                 console.log("False");
             }
             for (var i = 0; i < data.streams.length; i++) {
-                $("#following").append("<div class='row rowMargins'><div class='col-xs-5'><img class='pull-right' src='" +
+                $("#following").append("<div class='row rowMargins'><div class='col-md-5'><img class='center-block img-responsive' src='" +
                     data.streams[i].channel.logo + "'><h3><a href='" +
                     data.streams[i].channel.url + "'>" +
-                    data.streams[i].channel.display_name + "</a></h3></div><div class='col-xs-7'><img src='" +
+                    data.streams[i].channel.display_name + "</a></h3></div><div class='col-md-7'><img class='center-block img-responsive' src='" +
                     data.streams[i].preview.large + "'><h4 class='usrOn'><strong>Online</strong></h4><h4><strong>Status:</strong> " +
                     data.streams[i].channel.status + "</h4><h4><strong>Game:</strong> " +
                     data.streams[i].channel.game + "</h4><h4><strong>Viewers:</strong> " +
@@ -81,10 +81,10 @@ fccArray.forEach(function(channel) {
             // Takes care of missing logo
             if (theData.users[0].logo === null) {
 
-                $(".noExist").prepend("<div class='row rowMargins'><div class='col-xs-5'><img class='pull-right' src='https://static-cdn.jtvnw.net/jtv_user_pictures/twitch-profile_image-8a8c5be2e3b64a9a-300x300.png'>" +
+                $(".noExist").prepend("<div class='row rowMargins'><div class='col-md-5'><img class='center-block img-responsive' src='https://static-cdn.jtvnw.net/jtv_user_pictures/twitch-profile_image-8a8c5be2e3b64a9a-300x300.png'>" +
                     "<h3><a href='https://www.twitch.tv/" + channel + "'>" + theData.users[0].display_name +
-                    "</a></h3></div><div class='col-xs-7'><img src='https://static-cdn.jtvnw.net/ttv-static/404_preview-640x360.jpg'><h4 class='usrOff'><strong>Offline</strong></h4><h4><strong>Bio:</strong> " +
-                    theData.users[0].bio + "</h4></div></div>");
+                    "</a></h3></div><div class='col-md-7'><img class='center-block img-responsive' src='https://static-cdn.jtvnw.net/ttv-static/404_preview-640x360.jpg'><div class='outputWrap'><h4 class='usrOff'><strong>Offline</strong></h4><h4><strong>Bio:</strong> " +
+                    theData.users[0].bio + "</h4></div></div></div>");
 
             } else {
 
@@ -95,25 +95,25 @@ fccArray.forEach(function(channel) {
                     if (data.stream !== null) {
                         console.log(theData.users[0].display_name + " is online!");
 
-                        $("#online, #all").prepend("<div class='row rowMargins'><div class='col-xs-5'><img class='pull-right' src='" +
+                        $("#online, #all").prepend("<div class='row rowMargins'><div class='col-md-5'><img class='center-block img-responsive' src='" +
                             data.stream.channel.logo + "'><h3><a href='" +
                             data.stream.channel.url + "'>" +
-                            data.stream.channel.display_name + "</a></h3></div><div class='col-xs-7'><img src='" +
-                            data.stream.preview.large + "'><h4 class='usrOn'><strong>Online</strong></h4><h4><strong>Status:</strong> " +
+                            data.stream.channel.display_name + "</a></h3></div><div class='col-md-7'><img class='center-block img-responsive' src='" +
+                            data.stream.preview.large + "'><div class='outputWrap'><h4 class='usrOn'><strong>Online</strong></h4><h4><strong>Status:</strong> " +
                             data.stream.channel.status + "</h4><h4><strong>Game:</strong> " +
                             data.stream.channel.game + "</h4><h4><strong>Viewers:</strong> " +
                             data.stream.viewers + "</h4><h4><strong>Followers:</strong> " +
-                            data.stream.channel.followers + "</h4></div></div>");
+                            data.stream.channel.followers + "</h4></div></div></div>");
 
                     } else if (data.stream === null) {
                         console.log(theData.users[0].display_name + " is offline :(");
 
-                        $("#offline, #all").append("<div class='row rowMargins'><div class='col-xs-5'><img class='pull-right' src='" +
+                        $("#offline, #all").append("<div class='row rowMargins'><div class='col-md-5'><img class='center-block img-responsive' src='" +
                             theData.users[0].logo + "'><h3><a href='https://www.twitch.tv/" +
                             channel + "'>" +
                             theData.users[0].display_name +
-                            "</a></h3></div><div class='col-xs-7'><img src='https://static-cdn.jtvnw.net/ttv-static/404_preview-640x360.jpg'><h4 class='usrOff'><strong>Offline</strong></h4><h4><strong>Bio:</strong> " +
-                            theData.users[0].bio + "</h4></div></div>");
+                            "</a></h3></div><div class='col-md-7'><img class='center-block img-responsive' src='https://static-cdn.jtvnw.net/ttv-static/404_preview-640x360.jpg'><div class='outputWrap'><h4 class='usrOff'><strong>Offline</strong></h4><h4><strong>Bio:</strong> " +
+                            theData.users[0].bio + "</h4></div></div></div>");
                     }
                 });
             }
@@ -122,8 +122,8 @@ fccArray.forEach(function(channel) {
         } else if (theData._total === 0) {
             console.log(channel + " does not exist!");
 
-            $(".noExist").append("<div class='row rowMargins'><div class='col-xs-5'><img class='pull-right' src='https://static-cdn.jtvnw.net/jtv_user_pictures/twitch-profile_image-8a8c5be2e3b64a9a-300x300.png'><h3>" +
-                channel + "</h3></div><div class='col-xs-7'><img src='img/static.jpg'><h4>This channel does not exist</h4></div></div>");
+            $(".noExist").append("<div class='row rowMargins'><div class='col-md-5'><img class='center-block img-responsive' src='https://static-cdn.jtvnw.net/jtv_user_pictures/twitch-profile_image-8a8c5be2e3b64a9a-300x300.png'><h3>" +
+                channel + "</h3></div><div class='col-md-7'><img class='center-block img-responsive' src='img/static.jpg'><div class='outputWrap'><h4>This channel does not exist</h4></div></div></div>");
         }
     }
     apiCall("https://api.twitch.tv/kraken/users?login=", channel).done(handleData);

@@ -1,4 +1,5 @@
 /* Image Spin*/
+
 .spin {
     width: 120px;
     height: 120px;
@@ -32,13 +33,17 @@
         transform: rotate(360deg);
     }
 }
-/* -End Spin CSS- */
+
+
+/* End Spin CSS- */
 
 body {
-    /*This keeps scrollbar from resizing page*/    
+    /*This keeps scrollbar from resizing page*/
     margin-left: calc(100vw - 100%);
+    /*background: grey;*/
     background-image: url("img/debut_dark.png");
     background-attachment: fixed;
+    background-repeat: repeat;
     color: white;
     font-size: 24px;
 }
@@ -49,23 +54,14 @@ h1 {
 }
 
 h3 {
-    position: absolute;
-    left: 26%;
-    color: white;
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.7);
+    color: white;
     padding: 10px;
-}
-
-h4 {
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.7);
-    padding: 5px;
-    line-height: 130%;
-    text-align: center;
-    margin-left: 15px;
-    margin-right: 15px;
-    color: white;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    border-radius: 10px;
 }
 
 h3 > a {
@@ -77,9 +73,21 @@ h3 > a:focus,
 h3 > a:hover {
     color: white;
 }
+
+h4 {
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    line-height: 130%;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
 a {
     font-family: Orbitron;
 }
+
 .usrOn {
     color: lime;
 }
@@ -91,36 +99,50 @@ a {
 .rowMargins {
     margin-bottom: 10px;
     margin-top: 10px;
+    /*border-top: 4px #686098 solid;*/
+    /*border-bottom: 4px #686098 solid;*/
+}
+
+.tab-content .row {
+    border-bottom: 4px #686098 solid;
 }
 
 .btnEdit {
     margin-top: 37px;
     margin-bottom: 37px;
 }
-.noExist .col-xs-5 h3 {
+
+.noExist .col-md-5 h3 {
     font-family: Orbitron;
 }
-.col-xs-7 {
-    width: 533.328px;
-    position: relative;
+
+.col-md-5 > img {
+    border-radius: 10px;
+    /*border: 4px #686098 solid;*/
 }
 
-.col-xs-5,
-.col-xs-7 {
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.col-xs-7 > img {
+.col-md-7 > img {
     opacity: 0.5;
-    position: absolute;
     z-index: -1;
+    border-radius: 10px;
     max-height: 300px;
+    /*border: 4px #686098 solid;*/
 }
+
+.navbar {
+    background-image: url("img/debut_dark.png");
+    border-top: 1px solid #744f86;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 
 /*Pretty cool way to select every child after the first*/
+
+
 /*Slightly confused as this seems to cound img as 1st child?*/
-.col-xs-7 h4:nth-child(n+3) strong {
+
+.col-md-7 h4:nth-child(n+2) strong {
     color: #9f86ff;
 }
 
@@ -130,12 +152,12 @@ a {
 }
 
 #octocat {
-    position: fixed;
-    bottom: 30px;
-    left: 10px;
-    width: 120px;
-    opacity: 0.5;
+    /*position: absolute;*/
+    /*bottom: 10px;*/
+    /*right: -15px;*/
+    height: 70px;
     z-index: 1;
+    opacity: 0.5;
 }
 
 #octocat:hover {
@@ -143,18 +165,21 @@ a {
 }
 
 #upArrow {
-    position: fixed;
-    bottom: 10px;
-    left: 150px;
+    position: absolute;
+    right: 10px;
+    top: -5px;
     font-size: 70px;
-    opacity: 0.5;
     color: #9f86ff;
     z-index: 1;
+    /*bottom: -10px;*/
 }
-#upArrow:hover {
+
+#upArrow > span:hover {
     opacity: 1.0;
     color: #8a3bfc;
+    /*opacity: 0.5;*/
 }
+
 #myTabs .active a {
     background-color: #547ab3;
     color: floralwhite;
@@ -163,3 +188,112 @@ a {
 #myTabs a {
     color: floralwhite;
 }
+
+
+/*Bootstrap Media Queries*/
+
+
+/* Large desktops and laptops */
+
+@media (min-width: 1200px) {
+    .col-md-5 > img {
+        margin-right: -15px;
+    }
+    .col-md-7 > img {
+        margin-left: -15px;
+        max-height: 300px;
+    }
+    .outputWrap {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        width: 500px;
+    }
+}
+
+
+/* Landscape tablets and medium desktops */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .col-md-5 > img {
+        margin-right: -15px;
+    }
+    .col-md-7 > img {
+        margin-left: -15px;
+        max-height: 300px;
+    }
+    .outputWrap {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        width: 500px;
+    }
+}
+
+
+/* Portrait tablets and mdall desktops */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    h3 {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .rowMargins {
+        /*margin-bottom: 50px;*/
+        /*margin-top: 50px;*/
+    }
+    .col-md-5 > img {
+        width: 200px;
+    }
+    .outputWrap {
+        position: absolute;
+        top: 0;
+        left: 15%;
+        right: 15%;
+    }
+}
+
+
+/* Landscape phones and portrait tablets */
+
+@media (max-width: 767px) {
+    h3 {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .col-md-5 > img {
+        width: 200px;
+    }
+    .rowMargins {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    .outputWrap {
+        position: absolute;
+        top: 0;
+        left: 15%;
+        right: 15%;
+    }
+}
+
+
+/* Portrait phones and mdaller */
+
+@media (max-width: 480px) {
+    h4 {
+        padding: 0;
+        line-height: 100%;
+    }
+    .col-md-5 > img {
+        width: 50%;
+    }
+    .outputWrap {
+        left: 10%;
+        right: 10%;
+    }
+}
+
+
+/* End media query*/
